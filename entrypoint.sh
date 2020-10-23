@@ -3,6 +3,8 @@ sed -i "s/UUID/$UUID/g" /etc/v2ray/config.json
 sed -i "s/PORT/$PORT/g" /etc/v2ray/config.json
 #sed -i "s/PORT/$PORT/g" /etc/nginx/conf.d/default.conf
 
+/usr/bin/supervisord -c /etc/supervisord.conf
+
 mkdir -p /var/tmp/nginx/client_body
 
 #wget https://raw.githubusercontent.com/WinstonH/v2ray-heroku/master/index.html -O /var/lib/nginx/html/index.html
@@ -21,4 +23,4 @@ cat /etc/v2ray/config.json
 #nginx
 # main
 echo "Port is $PORT"
-/usr/bin/supervisord -c /etc/supervisord.conf
+
