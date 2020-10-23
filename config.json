@@ -5,7 +5,7 @@
     "loglevel" : "debug"
   },
   "inbound" : {
-    "port": $PORT, 
+    "port": 8080, 
     "protocol": "vmess",
     "settings": {
       "clients": [
