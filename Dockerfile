@@ -1,7 +1,7 @@
 FROM alpine:edge
 ENV UUID bae4c69e-3fe3-45d4-aaae-43dc34855efc
 
-ENV TZ 'Asia/Shanghai'
+ENV TZ 'America/Chicago'
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
 && apk upgrade --no-cache \
