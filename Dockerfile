@@ -12,8 +12,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
 
 RUN mkdir -p /usr/bin/v2ray/ \
 && cd /tmp \
-&& VER=$(curl -s https://api.github.com/repos/v2ray/v2ray-core/releases/latest | sed 's/,/\n/g' | grep tag_name | awk  -F '"' '{print $4}') \
-&& wget https://github.com/v2ray/v2ray-core/releases/download/$VER/v2ray-linux-64.zip \
+&& wget https://github.com/v2fly/v2ray-core/releases/download/v4.31.0/v2ray-linux-64.zip \
 && unzip v2ray-linux-64.zip \
 && chmod +x v2ray v2ctl \
 && mv v2* /usr/bin/v2ray/ \
