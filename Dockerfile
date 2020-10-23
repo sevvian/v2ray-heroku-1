@@ -6,8 +6,8 @@ ENV TZ 'Asia/Shanghai'
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
 && apk upgrade --no-cache \
 && apk --update --no-cache add tzdata supervisor ca-certificates nginx curl wget unzip \
-&& ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-&& echo "Asia/Shanghai" > /etc/timezone \
+&& ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime \
+&& echo "America/Chicago" > /etc/timezone \
 && rm -rf /var/cache/apk/*
 
 RUN mkdir -p /usr/bin/v2ray/ \
