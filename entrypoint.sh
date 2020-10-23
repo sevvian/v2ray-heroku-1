@@ -1,6 +1,6 @@
 #!/bin/sh
 sed -i "s/UUID/$UUID/g" /etc/v2ray/config.json
-sed -i "s/PORT/$PORT/g" /etc/nginx/conf.d/default.conf
+#sed -i "s/PORT/$PORT/g" /etc/nginx/conf.d/default.conf
 
 mkdir -p /var/tmp/nginx/client_body
 
@@ -13,10 +13,11 @@ mkdir -p /var/tmp/nginx/client_body
 #sed -i "s/BUILDDATE/$BUILDDATE/g" /var/lib/nginx/html/index.html
 #sed -i "s/REBOOTDATE/$REBOOTDATE/g" /var/lib/nginx/html/index.html
 
-echo "Port is $PORT"
+
 cat /etc/v2ray/config.json
-cat /etc/nginx/conf.d/default.conf
+#cat /etc/nginx/conf.d/default.conf
 # start nginx
-nginx
+#nginx
 # main
+echo "Port is $PORT"
 /usr/bin/supervisord -c /etc/supervisord.conf
