@@ -13,6 +13,7 @@ sed -i "s/VERSION/$VERSION/g" /var/lib/nginx/html/index.html
 sed -i "s/BUILDDATE/$BUILDDATE/g" /var/lib/nginx/html/index.html
 sed -i "s/REBOOTDATE/$REBOOTDATE/g" /var/lib/nginx/html/index.html
 
+echo "Port is $PORT"
 # start nginx
 nginx
 # main
